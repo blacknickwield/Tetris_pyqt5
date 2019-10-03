@@ -1,4 +1,4 @@
-# Tetris_pyqt5
+# Tetris_pyqt5（俄罗斯方块）
 Tetris using pyqt5
 
 俄罗斯方块是一款经典的游戏  
