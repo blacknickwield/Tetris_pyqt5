@@ -40,5 +40,5 @@ class Tetris(QMainWindow):
         size = self.geometry()  # 游戏窗口屏幕
 
         # move()函数调整位置，将游戏窗口居中
-        self.move((screen.width() - size.width()) / 2,
-                  (screen.height() - size.height()) / 2)
+        self.move(int((screen.width() - size.width()) / 2),
+                  int((screen.height() - size.height()) / 2))
