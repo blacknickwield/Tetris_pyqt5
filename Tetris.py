@@ -1,7 +1,7 @@
 """
 俄罗斯方块的主界面
 """
-from PyQt5.QtWidgets import QMainWindow, QDesktopWidget
+from PyQt5.QtWidgets import QMainWindow, QDesktopWidget, QMessageBox
 from Board import Board
 
 
@@ -42,3 +42,17 @@ class Tetris(QMainWindow):
         # move()函数调整位置，将游戏窗口居中
         self.move(int((screen.width() - size.width()) / 2),
                   int((screen.height() - size.height()) / 2))
+
+    def closeEvent(self, event):
+        reply = QMessageBox.question(
+            self,
+            'Quit',
+            '确定要关闭俄罗斯方块吗？',
+            QMessageBox.Yes | QMessageBox.No,
+            QMessageBox.Yes
+        )
+
+        if reply == QMessageBox.Yes:
+            event.accept()
+        else:
+            event.ignore()
